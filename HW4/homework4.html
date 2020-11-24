@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        * {
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+            box-sizing: border-box;
+        }
+
+        .mobile-block {
+            width: 375px;
+            background-color: #f1f1f1
+        }
+
+        #header {
+            padding: 20px;
+            /*width會繼承parents:375px--*/
+
+        }
+
+        .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ham {
+            vertical-align: middle;
+        }
+
+        .ham>div {
+            width: 28px;
+            height: 3px;
+            background-color: #C71B0A;
+            margin-bottom: 10px;
+        }
+
+        .title>p {
+            font-size: 16px;
+            line-height: 50px;
+            color: #000000;
+            font-weight: 700;
+            margin: 0px;
+            margin-left: 32px;
+
+        }
+
+        .title>div {
+            font-size: 34px;
+            line-height: 50px;
+            font-weight: 700;
+            color: #404040;
+            margin-left: 25px;
+            width: 326px;
+        }
+
+        .first-figcaption {
+            font-size: 14px;
+            line-height: 20px;
+            color: #808080;
+            display: inline-block;
+            margin: 20px 8px;
+        }
+
+        .line {
+            width: 300px;
+            height: 15px;
+            border-right: 1px solid #d0d0d0;
+            margin-left: 40px;
+        }
+
+        .hashtag {
+            border: 1px solid #808080;
+            border-radius: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .tag {
+            color: #808080;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 6px 10px;
+            margin: 0px;
+            display: inline-block;
+        }
+
+        .toolbox {
+            width: 285px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 23px;
+
+        }
+
+        .toolbox>img {
+            height: 100%;
+            margin-right: 17px;
+        }
+
+        .toolbox>img:last-of-type {
+            height: 100%;
+            margin-right: 0px;
+        }
+
+        .paragraph {
+            width: 280px;
+            margin-right: 45px;
+            margin-left: 45px;
+            font-size: 20px;
+            line-height: 40px;
+            color: #404040;
+        }
+
+        .second-figcaption {
+
+            margin-top: 60px;
+        }
+
+        .figcaption2 {
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.4px;
+            color: #999999;
+            margin: 15px 15px 0px 125px;
+            width: 233px;
+        }
+
+        .line3 {
+            border-top: 1px solid #D0A67D;
+            width: 235px;
+            margin: 15px 15px 52px 125px;
+        }
+
+        .relative-news {
+            width: 340px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 38px;
+
+        }
+
+        .flex-item {
+            width: 340px;
+      
+            border-bottom:1px solid #D0D0D0
+        }
+
+        .metadata {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #A67A44;
+        }
+
+        .title02 {
+            display: inline-block;
+            width: 191px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            color: #262626;
+            margin-top: 5px;
+            vertical-align:top ;
+        }
+
+        .picture {
+            display: inline-block;
+            vertical-align:top ;
+         
+        }
+        .flex-item>p{
+            font-size:12px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #d0d0d0;
+            margin-top:5px;
+            margin-bottom: 17px;
+        }
+
+        .footer{
+            width:375px;
+            color: #ffffff;
+        }
+
+        .footer>p{
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+            width:300px;
+            margin-top:60px;
+            margin-left: 37px;
+            color:#808080;
+        }
+
+        .about-us{
+            width:240px;
+            height:141px;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-left:74px;
+            margin-top:84px;
+        }
+        .about-us span{
+            font-size:18px;
+            font-weight:400;
+            line-height: 18px;
+            color:#808080;
+            margin-bottom:15px;
+            justify-content: space-between;
+        }
+        .share>img{
+            width:30px;
+            height:30px;
+            margin-right:20px;
+            margin-bottom:30px
+        }
+
+        .new-flag-block{
+            position:relative;
+        }
+
+        .new-flag{
+            width:30px;
+            height:21px;
+            background-color:#DA1F0D;
+            color:#ffffff;
+            font-size:12px;
+            font-weight: 400;
+            right:105%;
+            line-height: 18px;
+            position:absolute;
+            display:inline-block;
+            padding:2px;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mobile-block">
+        <div id="header">
+            <div class="logo">
+                <img src="./icon/twreporter-logo.svg">
+                <!--"../images/twreporter-logo.svg"透過這樣的寫法從內部資料夾引入進來(絕對路徑-外部引入vs相對路徑-相對於這個影片檔案的位置,..意思是上一個資料夾-->
+            </div><div class="ham" ; style=display:inline-block;margin-left:88px;>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="title">
+            <p>Reporter Saturday Features</p>
+            <div>【山思而行】登山中的死亡，對生命的凝視</div>
+        </div>
+        <div class="figure">
+            <img src="./image/20200214133514-05611004a1d3a72fe4c955027f2d4c33-desktop.jpg" ; style=width:375px;>
+            <figure-caption class="first-figcaption">
+                登上山峰之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。圖為2016年2月，一支國際登山隊正跨越珠穆朗瑪峰基地營附近的冰川。（攝影／AP／Tashi Sherpa／達志影像）
+            </figure-caption>
+        </div>
+
+        <div class="metadata">
+            <div class="line" style="margin-top:74px; border-top:1px solid #d0d0d0">
+            </div>
+            <p style="color:#A67A44;font-size:16px; line-height:22px;font-weight:700;margin:0px 246px 17px 49px">環境．教育
+            </p>
+            <div class="line" style=" border-top:1px solid #d0d0d0"></div>
+            <p style="color:#675757;font-size:14px;line-height:20px; margin:0px 205px 45px 40px;">刊出日期 2020/2/28</p>
+            <div class="hashtag" style="margin-left:36px">
+                <p class=tag>#體育</p>
+            </div>
+            <div class="hashtag">
+                <p class="tag">#山思而行</p>
+            </div>
+            <div class="line" style="border-bottom:1px solid #d0d0d0"></div>
+            <div class="toolbox">
+                <img src="./icon/add-bookmark.svg">
+                <img src="./icon/tool-text.svg">
+                <img src="./icon/tool-print.svg">
+                <img src="./icon/share-line.svg">
+                <img src="./icon/share-fb.svg">
+                <img src="./icon/share-twitter.svg">
+            </div>
+        </div>
+
+        <div class="paragraph">
+            <div style="margin-top:81px;">
+                講到登山，普遍的印象可能是壯闊的山景，雲海朝霞萬丈金芒；也可能是山上人與人之間的情誼，過地形時伸手扶一把，或濕冷雨天一碗熱呼呼的泡麵。我們在山中感受生命各種美好，汲取養分。就算是逆境，痛苦會過去，美會留下，回到人間後依舊能量滿滿再度出發。
+            </div>
+            <div style="margin-top:40px;">做為人，不知為何，我們傾向記憶美好，卻遺忘過程的苦痛。但我卻想，這是否讓我們理解、記憶一件事情性質的方式，也隨之產生偏誤？</div>
+            <div style="margin-top:40px;display: inline-block;;">我想說的是，登山是件會死人的運動。 </div>
+        </div>
+        <div
+            style="font-size: 20px;line-height: 40px;background-color:white ; margin-top:25px; padding:14px 40px 22px 38px">
+            某程度上，登上山巔之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。這樣的經驗本身，就是一種回報，高處的風景與抵達最高點的滿足，則是額外的嘉獎。</div>
+        <div class="paragraph">
+            <div style="margin-top:60px">
+                那是個風和日麗的早晨，我跟阿果從標高5,600公尺的馬卡魯峰前進基地營帳篷中醒來。我倆前一天剛攀升至7,150公尺處進行適應攀登並下山，往後一週將是一系列壞天氣週期的到來，所以我們正準備迎接休息日的放鬆作息。
+            </div>
+            <div style="margin-top:40px;">慢慢踱進餐廳帳，吃完千篇一律的鬆餅加煎蛋，正想放個音樂泡杯咖啡，這時外面有人叫我。是Lakpa。
+            </div>
+            <div style="margin-top:40px;display:inline-block">Lakpa是隔壁營區的商業團"Pioneer
+                Adventure"的老闆，今年除了我跟阿果，馬卡魯峰這裡還有同樣來自台灣的登山者<a
+                    href="https://zh.wikipedia.org/wiki/%E8%A9%B9%E5%96%AC%E6%84%89" target="blank"><span
+                        style="color:#A67A44;text-decoration: underline;line-height: 38px;">三條魚</span><span></a>，她就在這個隊伍中。</span>
+            </div>
+            <div style="margin-top:40px;">原本以為Lakpa是來約我們晚上去他們隊上吃個飯之類的，興高采烈的走出去跟他打招呼，沒想到他表情挺嚴肅：
+            </div>
+
+        </div>
+        <div class="second-figcaption">
+            <img src="./image/20200214133536-860474831449c5e95fab1b3d7c98b3ad-desktop.jpg" ; style="width:375px;">
+            <div class=figcaption2>2017年3月，一隊登山者朝向尼泊爾羅布崎的登山營地前進。（攝影／AP／Tashi Sherpa／達志影像）</div>
+            <div class="line3"></div>
+
+        </div>
+        <div class="paragraph">
+            <div style="margin-top:0px;">
+                其實我們也常忽略，就算我們將自己關在由水泥與文明構成的防護罩中，離野性的大自然遠遠的，各種意外還是可能在不經意間降臨。但我們卻很容易欺騙自己，在日常文明生活中，死亡離我們很遠。加上華人文化將生死視作忌諱而不與談論，所以大多數人其實並不真正意識到，死亡其實比我們想像中靠近。
+            </div>
+            <div style="margin-top:40px;">
+                我真正意識到這件事情是2013年，那年我在當兵，因為身體背面一個莫名的黑色凸起去看醫生。原本以為是痣，切掉就好了。結果醫生一看面色凝重：「你這個可能是黑色素瘤，得趕快預約開刀之後做切片檢查。」我一開始還想說那啥，不就是個小肉瘤嗎？結果一google之下，發現如果真的是黑色素瘤，我活超過3年的機率不到10%。
+            </div>
+            <div style="margin-top:40px" ;>
+                當然後來切片檢查是良性，切掉就沒事了。但這件事情某程度上改變了我的世界觀。在熱愛的事情上投注生命與熱情，就算有其風險，依舊要直面死亡。如此，也才是真正認真的直面生命。
+            </div>
+            <div style="margin-top: 40px;">
+                生命有各種路徑與選擇，60億人也許有60億種人生樣態。重要的，是釐清並接受，自己走在怎樣的生命之道上。若能無悔，就是一種幸運。這篇文章，與其說是寫給不特定受眾，不如說是寫給自己。
+            </div>
+            <div style="margin-top: 40px;">
+                自開始登山並投入海外攀登以來，隨著逐漸深入，難免就有愈多認識的人永遠留在了山上。問我怎麼去看待這些逝去？也許有些沉重，但更多的是祝福。
+            </div>
+            <!--少一個波浪符號-->
+         
+        </div>
+        <div class="relative-news">
+               <div style="margin-top:171px; margin-bottom:49px;font-size: 20px; font-weight: 400; line-height: 28px;color: #808080;">
+                相關文章</div>
+            <div class="flex-item">
+                <div class="metadata">環境・教育</div>
+                <div class="title02">
+                    探險一步、前進一步<br/>
+                    呂忠翰、張元植挑戰台灣人首登「野蠻巨峰」K2 </div>
+                <div class="picture">
+                    <img src="./01.png"></div>
+                <p>2019/4/26</p>
+            </div>
+            <div class="flex-item">
+                <div class="metadata" style="margin-top: 20px;">環境・教育</div>
+                <div class="title02">守在半山腰的指揮靈魂<br/>「8千公尺英雄」推手連志展</div>
+                <div class="picture">
+                    <img src="./02 (2).png">
+                </div>
+                <p>2019/4/26</p>
+            </div>
+            <div class="flex-item">
+                <div class="metadata" style="margin-top: 20px;">環境・教育</div>
+                <div class="title02">山，在這裡──紙上攻頂14座8千公尺高山</div>
+                <div class="picture">
+                    <img src="./02 (3).png"></div>
+                <p>2019/4/26</p>
+            </div>
+            <div class="flex-item">
+                <div class="metadata" style="margin-top: 20px;">環境・教育</div>
+                <div class="title02">【山思而行】高海拔的氧氣，就像自由</div>
+                <div class="picture">
+                    <img src="./02 (1).png"></div>
+                 <p>2019/4/26</p>
+            </div>
+            <div style="height:81px;"></div>
+        </div>
+    </div>    
+    <div class="footer">
+        <p>
+        2015年12月《報導者》正式上線，稟持深度、開放、非營利的精神，致力於公共領域調查報導，為讀者持續追蹤各項重要議題，共同打造多元的社會與媒體環境。 
+        </p>
+        <div class="about-us">
+            <span>關於我們</span>
+            <span>聯絡我們</span>
+            <span>作者群</span>
+            <div class="new-flag-block">
+                <div class="new-flag">New</div>
+                <span>影響力報告</span>
+            </div>
+            <span>隱私政策</span>
+            <span>許可協議</span>
+            <span>捐款徵信</span>
+        </div>
+        <div class="about-us" style="margin-top:38px">
+            <span>常見問題</span>
+            <span>加入我們</span>
+            <span>訂閱電子報</span>
+            <span>報導者基金會新聞專區</span>
+        </div>
+    </div>
+    <div class="share"; style="width:280px; display:flex; ;margin-left:50px;align-items: center;">
+        <img src="./icon/share-fb.svg">
+        <img src="./icon/instgram.png">
+        <img src="./icon/share-line.svg">
+        <img src="./icon/medium.png">
+        <img src="./icon/github.png">
+        <img src="./icon/rss.png">
+    </div>
+
+
+
+</body>
+
+</html>
